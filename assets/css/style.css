@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('../dist/bootstrap/css/bootstrap.min.css');
+
+body {
+    color: #000;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    overflow-x: hidden;
+    position: relative;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+button:active,
+button:focus,
+.btn:active,
+.btn:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.img-responsive,
+.navbar-brand>img {
+    display: inline-block;
+}
+
+img {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 32px;
+}
+
+p,
+li {
+    color: #000;
+    font: 400 14px/1.5 'Bebas Neue', cursive;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.clearfix {
+    clear: both;
+    margin: 0px;
+    padding: 0px;
+}
+
+.center {
+    text-align: center;
+}
+
+.hero {
+    clear: both;
+    position: fixed;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.hero video {
+    width: 100% !important;
+    height: 100vh !important;
+    object-fit: cover;
+}
+
+.overlay {
+    height: 100vh;
+    left: 0px;
+    padding: 2% 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+}
+
+.btn-login {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 24px;
+    width: 100%;
+}
+
+.btn-login:hover {
+    color: #fff;
+}
+
+.btn-join {
+    background: rgb(177, 136, 57);
+    background: linear-gradient(0deg, rgba(177, 136, 57, 1) 0%, rgba(243, 190, 88, 1) 100%);
+    border: 1px solid rgba(255, 255, 255, 1.0);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 24px;
+    margin-top: 7px;
+    width: 100%;
+}
+
+.btn-join:hover {
+    color: #fff;
+}
+
+.speaker {
+    background-color: #fff;
+    border-radius: 50px;
+    clear: both;
+    padding: 20px 20px;
+    max-width: 70px;
+}
+
+.speaker .progress {
+    background-color: #e8e8e8;
+    border-radius: 15px;
+    height: 598px;
+    margin: 0 auto;
+    position: relative;
+    width: 23px;
+}
+
+.speaker .progress-bar {
+    background-color: #494949;
+    border-radius: 15px;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+/*-------------------
+    Media Query
+---------------------------*/
+
+@media only screen and (max-width: 767px) {
+    h4 {
+        font-size: 24px;
+    }
+
+    .hero {
+        background: url("../images/hre_vdo_bg.jpg") no-repeat top center / cover;
+    }
+
+    .hero video {
+        display: none;
+    }
+
+    .col {
+        flex-basis: auto;
+        margin-bottom: 1rem;
+        max-width: 50%;
+    }
+
+    .gx-5 {
+        --bs-gutter-x: 1rem;
+    }
+
+    .col img {
+        width: 100px;
+    }
+
+    .btn-login,
+    .btn-join {
+        font-size: 18px;
+    }
+
+    .speaker {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    h4 {
+        font-size: 24px;
+    }
+
+    .logo {
+        max-width: 320px;
+    }
+
+    .pt-3 {
+        padding-top: .5rem !important;
+    }
+
+    .gx-5 {
+        --bs-gutter-x: 2rem;
+    }
+
+    .btn-login,
+    .btn-join {
+        font-size: 18px;
+    }
+
+    .speaker {
+        padding: 10px 5px;
+        width: 20px;
+    }
+
+    .speaker .progress {
+        height: 398px;
+        width: 7px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .pt-3 {
+        padding-top: .5rem !important;
+    }
+
+    .gx-5 {
+        --bs-gutter-x: 2rem;
+    }
+
+    .speaker {
+        padding: 10px 5px;
+        width: 20px;
+    }
+
+    .speaker .progress {
+        height: 598px;
+        width: 7px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1299px) {
+    .speaker {
+        padding: 20px 15px;
+        width: 50px;
+    }
+
+    .speaker .progress {
+        width: 20px;
+    }
+}
+
+/*-------------------
+    Yut edit
+---------------------------*/
+
+.img-country {
+    width: 70%;
+    margin-top: 15rem;
+    /* outline: 6px solid rgb(0, 0, 0);
+    outline-offset: -6px; */
+}
+
+.logo-nav {
+    max-width: 330px;
+    width: 100%;
+    margin: auto;
+    padding-top: 15px;
+}
