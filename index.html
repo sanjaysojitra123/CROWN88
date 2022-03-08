@@ -168,13 +168,13 @@
 		// } else {
 		// 	$('.speaker').removeClass('muted').removeClass('sound2');
 		// }
-
+		console.log(video.volume, 'video.volume')
 		if (video.volume == 0) {
-			$('.sound').hide();
-			$('.sound2').show();
-		} else {
 			$('.sound').show();
 			$('.sound2').hide();
+		} else {
+			$('.sound').hide();
+			$('.sound2').show();
 		}
 
 	};
