@@ -160,7 +160,7 @@
 		$('.volumeBar').css('width', percentage + '%');
 		video.volume = percentage / 100;
 
-		//change sound icon based on volume
+		// change sound icon based on volume
 		// if (video.volume == 0) {
 		// 	$('.speaker').removeClass('sound2').addClass('muted');
 		// } else if (video.volume > 0.5) {
@@ -168,6 +168,14 @@
 		// } else {
 		// 	$('.speaker').removeClass('muted').removeClass('sound2');
 		// }
+
+		if (video.volume == 0) {
+			$('.sound').hide();
+			$('.sound2').show();
+		} else {
+			$('.sound').show();
+			$('.sound2').hide();
+		}
 
 	};
 </script>
