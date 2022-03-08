@@ -10,15 +10,14 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-light bg-dark">
+	<nav class="navbar navbar-light bg-dark position-static">
 		<!-- <span class="navbar-brand mb-0 h1">Navbar</span> -->
 		<img src="assets/images/logo.png" class="logo-nav" alt="">
 	</nav>
 	<div class="hero">
-		<video autoplay="autoplay" muted="muted" loop="loop" id="CROWN88" preload="auto"
+		<video  muted="muted" autoplay="autoplay" loop="loop" id="CROWN88" preload="auto"
 			poster="assets/images/hre_vdo_bg.jpg" playsinline="playsinline">
-			<source src="assets/video/CROWN88_FINAL_15Sec.mp4" type="video/mp4">
-			<!-- <source src="assets/video/CROWN88_FINAL_15Sec.ogg" type="video/ogg"> -->
+			<source src="assets/video/crown2.mp4" type="video/mp4">
 		</video>
 	</div>
 	<!-- <div class="position-absolute bottom-0 start-0 mt-3 ms-3">
@@ -168,7 +167,6 @@
 		// } else {
 		// 	$('.speaker').removeClass('muted').removeClass('sound2');
 		// }
-		console.log(video.volume, 'video.volume')
 		if (video.volume == 0) {
 			$('.sound').show();
 			$('.sound2').hide();
