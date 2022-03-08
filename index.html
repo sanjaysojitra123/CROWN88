@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="assets/css/style.css" rel="stylesheet">
 	<title>Crown88</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -14,23 +15,24 @@
 		<img src="assets/images/logo.png" class="logo-nav" alt="">
 	</nav>
 	<div class="hero">
-		<video id="CROWN88" preload="auto" poster="assets/images/hre_vdo_bg.jpg" playsinline="playsinline"
-			autoplay="autoplay" muted="muted" loop="loop">
+		<video autoplay="autoplay" muted="muted" loop="loop" id="CROWN88" preload="auto"
+			poster="assets/images/hre_vdo_bg.jpg" playsinline="playsinline">
 			<source src="assets/video/CROWN88_FINAL_15Sec.mp4" type="video/mp4">
 			<!-- <source src="assets/video/CROWN88_FINAL_15Sec.ogg" type="video/ogg"> -->
 		</video>
 	</div>
-	<div class="position-absolute top-0 start-0 mt-3 ms-3">
+	<!-- <div class="position-absolute bottom-0 start-0 mt-3 ms-3">
 		<div class="speaker">
 			<div class="progress">
-				<div class="progress-bar" role="progressbar" style="height: 92%" aria-valuenow="25" aria-valuemin="0"
+				<div class="progress-bar" role="progressbar" style="height: 50%" aria-valuenow="25" aria-valuemin="0"
 					aria-valuemax="100"></div>
 			</div>
 			<div class="border-top mt-3 pt-3">
 				<img src="assets/images/speaker.png" alt="">
 			</div>
 		</div>
-	</div>
+	</div> -->
+
 	<div class="overlay">
 		<div class="container">
 			<!-- <div class="row">
@@ -41,7 +43,7 @@
 			<div class="row gx-5">
 				<div class="col center">
 					<figure>
-						<img src="assets/images/flag_01.png" class="img-country rounded-circle">
+						<img src="assets/images/flag_01.png" class="img-country">
 					</figure>
 					<h4>Malaysia</h4>
 					<a href="#" class="btn btn-login">Login</a>
@@ -49,7 +51,7 @@
 				</div>
 				<div class="col center">
 					<figure>
-						<img src="assets/images/flag_02.png" class="img-country rounded-circle">
+						<img src="assets/images/flag_02.png" class="img-country">
 					</figure>
 					<h4>Myanmar</h4>
 					<a href="#" class="btn btn-login">Login</a>
@@ -57,7 +59,7 @@
 				</div>
 				<div class="col center">
 					<figure>
-						<img src="assets/images/flag_03.png" class="img-country rounded-circle">
+						<img src="assets/images/flag_03.png" class="img-country">
 					</figure>
 					<h4>Singapore</h4>
 					<a href="#" class="btn btn-login">Login</a>
@@ -65,7 +67,7 @@
 				</div>
 				<div class="col center">
 					<figure>
-						<img src="assets/images/flag_04.png" class="img-country rounded-circle">
+						<img src="assets/images/flag_04.png" class="img-country">
 					</figure>
 					<h4>Thailand</h4>
 					<a href="#" class="btn btn-login">Login</a>
@@ -73,7 +75,7 @@
 				</div>
 				<div class="col center">
 					<figure>
-						<img src="assets/images/flag_05.png" class="img-country rounded-circle">
+						<img src="assets/images/flag_05.png" class="img-country">
 					</figure>
 					<h4>Vietnam</h4>
 					<a href="#" class="btn btn-login">Login</a>
@@ -81,7 +83,19 @@
 				</div>
 			</div>
 		</div>
+		<div class="position-absolute bottom-0 start-0 w-100">
+			<div class="speaker">
+				<div>
+					<img class="sound" src="assets/images/speaker.jpeg" alt="">
+					<img class="sound2" src="assets/images/speaker2.jpeg" alt="">
+				</div>
+			</div>
+			<div class="volume" title="Set volume"> <span class="volumeBar"></span></div>
+		</div>
+
 	</div>
+
+
 	<script src="assets/dist/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
@@ -89,5 +103,71 @@
 
 
 <script>
+	$('.sound2').hide();
+	var video = document.getElementById("CROWN88")
+	video.play();
 
+	$('.speaker').click(function () {
+		if (video.muted) {
+			$('.sound').hide();
+			$('.sound2').show();
+		} else {
+			$('.sound').show();
+			$('.sound2').hide();
+		}
+		video.muted = !video.muted;
+		return false;
+	});
+
+	var volumeDrag = false;
+	$('.volume').on('mousedown', function (e) {
+		volumeDrag = true;
+		video.muted = false;
+		// $('.speaker').removeClass('muted');
+		updateVolume(e.pageX);
+	});
+	$(document).on('mouseup', function (e) {
+		if (volumeDrag) {
+			volumeDrag = false;
+			updateVolume(e.pageX);
+		}
+	});
+	$(document).on('mousemove', function (e) {
+		if (volumeDrag) {
+			updateVolume(e.pageX);
+		}
+	});
+	var updateVolume = function (x, vol) {
+		var volume = $('.volume');
+		var percentage;
+		//if only volume have specificed
+		//then direct update volume
+		if (vol) {
+			percentage = vol * 100;
+		} else {
+			var position = x - volume.offset().left;
+			percentage = 100 * position / volume.width();
+		}
+
+		if (percentage > 100) {
+			percentage = 100;
+		}
+		if (percentage < 0) {
+			percentage = 0;
+		}
+
+		//update volume bar and video volume
+		$('.volumeBar').css('width', percentage + '%');
+		video.volume = percentage / 100;
+
+		//change sound icon based on volume
+		// if (video.volume == 0) {
+		// 	$('.speaker').removeClass('sound2').addClass('muted');
+		// } else if (video.volume > 0.5) {
+		// 	$('.speaker').removeClass('muted').addClass('sound2');
+		// } else {
+		// 	$('.speaker').removeClass('muted').removeClass('sound2');
+		// }
+
+	};
 </script>
