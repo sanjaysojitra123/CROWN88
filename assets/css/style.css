@@ -152,13 +152,6 @@ li {
     width: 100%;
 }
 
-.img-volume {
-    /* width: 70%; */
-    /* margin-top: 2px;
-    margin-left: 3px; */
-}
-
-
 /*-------------------
     Media Query
 ---------------------------*/
@@ -270,7 +263,7 @@ li {
 
 .img-country {
     width: 70%;
-    margin-top: 15rem;
+    /* margin-top: 15rem; */
     /* outline: 6px solid rgb(0, 0, 0);
     outline-offset: -6px; */
 }
