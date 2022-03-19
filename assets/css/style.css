@@ -165,9 +165,9 @@ li {
         background: url("../images/hre_vdo_bg.jpg") no-repeat top center / cover;
     }
 
-    .hero video {
+    /* .hero video {
         display: none;
-    }
+    } */
 
     .col {
         flex-basis: auto;
@@ -188,9 +188,9 @@ li {
         font-size: 18px;
     }
 
-    .speaker {
+    /* .speaker {
         display: none;
-    }
+    } */
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
