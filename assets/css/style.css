@@ -158,7 +158,11 @@ li {
 
 @media only screen and (max-width: 767px) {
     h4 {
-        font-size: 24px;
+        font-size: 18px;
+    }
+
+    .logo-nav {
+        max-width: 250px !important;
     }
 
     .hero {
@@ -185,7 +189,7 @@ li {
 
     .btn-login,
     .btn-join {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     /* .speaker {
