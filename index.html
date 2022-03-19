@@ -79,12 +79,16 @@
 			</div>
 		</div>
 		<div class="container d-none d-xl-block">
+			<br><br><br> <br><br>
 			<div class="row gx-5 mar">
+
 				<div class="col center">
 					<figure>
 						<img src="assets/images/flag_01.png" class="img-country">
 					</figure>
+					<br><br>
 					<h4>Malaysia</h4>
+					<br>
 					<a href="#" class="btn btn-login">Login</a>
 					<a href="#" class="btn btn-join">Join Now</a>
 				</div>
@@ -92,7 +96,9 @@
 					<figure>
 						<img src="assets/images/flag_02.png" class="img-country">
 					</figure>
+					<br><br>
 					<h4>Myanmar</h4>
+					<br>
 					<a href="#" class="btn btn-login">Login</a>
 					<a href="#" class="btn btn-join">Join Now</a>
 				</div>
@@ -100,7 +106,9 @@
 					<figure>
 						<img src="assets/images/flag_03.png" class="img-country">
 					</figure>
+					<br><br>
 					<h4>Singapore</h4>
+					<br>
 					<a href="#" class="btn btn-login">Login</a>
 					<a href="#" class="btn btn-join">Join Now</a>
 				</div>
@@ -108,7 +116,9 @@
 					<figure>
 						<img src="assets/images/flag_04.png" class="img-country">
 					</figure>
+					<br><br>
 					<h4>Thailand</h4>
+					<br>
 					<a href="#" class="btn btn-login">Login</a>
 					<a href="#" class="btn btn-join">Join Now</a>
 				</div>
@@ -116,7 +126,9 @@
 					<figure>
 						<img src="assets/images/flag_05.png" class="img-country">
 					</figure>
+					<br><br>
 					<h4>Vietnam</h4>
+					<br>
 					<a href="#" class="btn btn-login">Login</a>
 					<a href="#" class="btn btn-join">Join Now</a>
 				</div>
@@ -148,7 +160,7 @@
 	$('.sound2').hide();
 	var video = document.getElementById("CROWN88")
 	video.play();
-
+	console.log(video.muted, 'video.muted')
 	$('.speaker').click(function () {
 		if (video.muted) {
 			$('.sound').hide();
@@ -219,4 +231,10 @@
 		}
 
 	};
+
+		document.addEventListener('click', () => {
+			video.muted = false;
+			$('.sound').hide();
+			$('.sound2').show();
+		});
 </script>
