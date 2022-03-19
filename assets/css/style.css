@@ -263,7 +263,7 @@ li {
 
 .img-country {
     width: 70%;
-    margin-top: rem;
+    margin-top: 1rem;
     /* outline: 6px solid rgb(0, 0, 0);
     outline-offset: -6px; */
 }
@@ -279,25 +279,27 @@ li {
 
 /* volume bar */
 .volume {
-    position:relative;
-    cursor:pointer;
-    width:100%;
-    height:20px;
-    float:left;
-    margin-top:10px;
-    margin-right:10px;
-    background-color:#000;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 20px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: #000;
 }
+
 .volumeBar {
-    display:block;
-    height:20px;
-    position:absolute;
-    top:0;
-    left:0;
-    background-color:#888;
-    z-index:10;
+    display: block;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #888;
+    z-index: 10;
     width: 90%;
 }
+
 .volume3 {
     width: 0;
     height: 0;
