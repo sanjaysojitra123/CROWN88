@@ -266,14 +266,14 @@ li {
 ---------------------------*/
 
 .img-country {
-    width: 70%;
+    width: 55%;
     margin-top: 1rem;
     /* outline: 6px solid rgb(0, 0, 0);
     outline-offset: -6px; */
 }
 
 .logo-nav {
-    max-width: 330px;
+    max-width: 264px;
     width: 100%;
     margin: auto;
     padding-top: 15px;
