@@ -323,3 +323,7 @@ li {
 .mar {
     margin-top: 12rem;
 }
+
+.width-desk {
+    min-width: 1500px;
+}
