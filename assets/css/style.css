@@ -9,6 +9,10 @@ body {
     position: relative;
 }
 
+.wid-desk {
+    min-width: max-content;
+}
+
 a,
 a:hover {
     text-decoration: none;
