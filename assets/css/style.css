@@ -10,7 +10,7 @@ body {
 }
 
 .wid-desk {
-    min-width: max-content;
+    min-width: 1024;
 }
 
 a,
